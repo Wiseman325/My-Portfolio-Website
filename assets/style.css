@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #1e1e1e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00df9a;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00df9a;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+    background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #00df9a;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.hero-button {
+    background: #00bcd4;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+    background: #0097a7;
+}
+
+.hero-bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00bcd4, #3f51b5, #9c27b0, #f44336);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10%;
+    background-color: #181818;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #00df9a;
+}
+
+.about-text p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #00df9a;
+}
+
+.projects {
+    padding: 60px 10%;
+    background-color: #1c1c1c;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    color: #00df9a;
+    margin-bottom: 30px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    width: 300px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.project h3 {
+    color: #00df9a;
+}
+
+.project p {
+    opacity: 0.8;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.contact {
+    padding: 60px 10%;
+    background-color: #181818;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #00df9a;
+}
+
+.contact a {
+    color: #00df9a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project-list {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    /* Projects Section Enhancements */
+.project-category {
+    margin-bottom: 40px;
+}
+
+.project-category h3 {
+    font-size: 2rem;
+    color: #00df9a;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* Align projects to the left */
+}
+
+.project {
+    width: 350px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    text-align: left; /* Align project text to the left */
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+.project p {
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+}
