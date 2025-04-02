@@ -11,6 +11,7 @@ body {
     color: #ffffff;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -25,10 +26,12 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+/* Navigation Menu */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
     color: #00df9a;
+    cursor: pointer;
 }
 
 nav ul {
@@ -51,6 +54,33 @@ nav ul li a:hover {
     color: #00df9a;
 }
 
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1e1e1e;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
@@ -60,7 +90,11 @@ nav ul li a:hover {
     text-align: center;
     padding: 0 10%;
     background: linear-gradient(to right, #0f0f0f, #1c1c1c);
-    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
 }
 
 .hero-content h1 {
@@ -75,19 +109,21 @@ nav ul li a:hover {
 }
 
 .hero-button {
-    background: #00bcd4;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007BFF;
     color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
     text-decoration: none;
-    font-size: 1.1em;
+    border-radius: 5px;
+    font-weight: bold;
     transition: background 0.3s ease;
 }
 
 .hero-button:hover {
-    background: #0097a7;
+    background-color: #0056b3;
 }
 
+/* Hero Background Animation */
 .hero-bg-animation {
     position: absolute;
     top: 0;
@@ -96,7 +132,7 @@ nav ul li a:hover {
     height: 100%;
     background: linear-gradient(45deg, #00bcd4, #3f51b5, #9c27b0, #f44336);
     background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
+    animation: gradientAnimation 25s ease infinite;
     opacity: 0.7;
     z-index: 0;
 }
@@ -107,6 +143,7 @@ nav ul li a:hover {
     100% { background-position: 0% 50%; }
 }
 
+/* About Section */
 .about {
     display: flex;
     justify-content: center;
@@ -123,6 +160,10 @@ nav ul li a:hover {
 
 .about-text {
     max-width: 600px;
+    text-align: justify;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .about-text h2 {
@@ -132,7 +173,6 @@ nav ul li a:hover {
 
 .about-text p {
     margin-top: 10px;
-    font-size: 1.2rem;
     opacity: 0.8;
 }
 
@@ -141,6 +181,19 @@ nav ul li a:hover {
     height: 200px;
     border-radius: 50%;
     border: 4px solid #00df9a;
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .projects {
@@ -153,25 +206,27 @@ nav ul li a:hover {
     font-size: 2.5rem;
     color: #00df9a;
     margin-bottom: 30px;
+    text-align: center;
 }
 
+/* Grid Layout for Projects */
 .project-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic columns */
     gap: 20px;
-    justify-content: center;
 }
 
 .project {
-    width: 300px;
-    padding: 20px;
     background-color: #222;
+    padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s;
+    text-align: left;
 }
 
 .project h3 {
     color: #00df9a;
+    margin-bottom: 10px;
 }
 
 .project p {
@@ -180,8 +235,28 @@ nav ul li a:hover {
 
 .project:hover {
     transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 255, 154, 0.3);
 }
 
+.check-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #1a1a1a; /* Almost Black */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.check-btn:hover {
+    background-color: #333; /* Slightly Lighter */
+}
+
+
+
+
+/* Contact Section */
 .contact {
     padding: 60px 10%;
     background-color: #181818;
@@ -203,63 +278,10 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Responsive Projects */
 @media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image img {
-        width: 150px;
-        height: 150px;
-    }
-
     .project-list {
         flex-direction: column;
+        align-items: center;
     }
-
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-
-    .hero-content p {
-        font-size: 1em;
-    }
-
-    /* Projects Section Enhancements */
-.project-category {
-    margin-bottom: 40px;
-}
-
-.project-category h3 {
-    font-size: 2rem;
-    color: #00df9a;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start; /* Align projects to the left */
-}
-
-.project {
-    width: 350px; /* Adjust width as needed */
-    padding: 20px;
-    background-color: #222;
-    border-radius: 10px;
-    transition: transform 0.3s;
-    text-align: left; /* Align project text to the left */
-}
-
-.project h3 {
-    margin-bottom: 10px;
-}
-
-.project p {
-    opacity: 0.8;
-    margin-bottom: 10px;
-}
 }

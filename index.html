@@ -9,20 +9,22 @@
 <body>
 
     <header>
-            <div class="logo">CM</div>
+        <div class="logo">CM</div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+    
 
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Welcome to My Portfolio</h1>
-            <p>Exploring technology, AI, and cybersecurity.</p>
+            <p>Where technology meets creativity and innovation.</p>
             <br>
             <br>
             <a href="#projects" class="hero-button">View My Work</a>
@@ -45,28 +47,34 @@
 
     <section id="projects" class="projects">
         <h2>My Projects</h2>
-
+        <hr>
+        <br>
+    
         <div class="project-category">
             <h3>Web Applications</h3>
+            <br>
             <div class="project-list">
                 <div class="project">
                     <h3>Youth Incubation System | Donation System</h3>
                     <p>Connects low-income students with donors for educational funding, using Flask and SQLAlchemy.</p>
                     <p>Technologies: Python Flask Framework | SQL Alchemy</p>
+                    <a href="https://github.com/YOUR_GITHUB/YOUTH-INCUBATION" target="_blank" class="check-btn">View Project</a>
                 </div>
                 <div class="project">
                     <h3>SA Police Services | Case Management</h3>
                     <p>Online crime reporting and case tracking system, built with ASP.Net Core MVC and SQL Server.</p>
                     <p>Technologies: ASP.Net Core MVC | SQL Server | Azure</p>
+                    <a href="https://github.com/YOUR_GITHUB/CASE-MANAGEMENT" target="_blank" class="check-btn">View Project</a>
                 </div>
                 <div class="project">
                     <h3>Thuthuka Constructions | Project Management</h3>
                     <p>Website for clients to explore projects, request quotes, and manage construction services.</p>
                     <p>Technologies: ASP.Net Core MVC | SQL Server | Azure</p>
+                    <a href="https://github.com/YOUR_GITHUB/THUTHUKA-CONSTRUCTIONS" target="_blank" class="check-btn">View Project</a>
                 </div>
             </div>
         </div>
-<br>
+    <br>
         <div class="project-category">
             <h3>Native Android Applications</h3>
             <br>
@@ -75,20 +83,23 @@
                     <h3>Safe Kids | School Attendance System</h3>
                     <p>Android app using QR code scanning for real-time attendance tracking.</p>
                     <p>Technologies: Java & XML | SQLite</p>
+                    <a href="https://github.com/YOUR_GITHUB/SAFE-KIDS" target="_blank" class="check-btn">View Project</a>
                 </div>
                 <div class="project">
                     <h3>Varcity Health | Dr. Appointment Booking</h3>
                     <p>University students can book doctor appointments directly through the app.</p>
                     <p>Technologies: Java & XML | PHP</p>
+                    <a href="https://github.com/YOUR_GITHUB/VARCITY-HEALTH" target="_blank" class="check-btn">View Project</a>
                 </div>
                 <div class="project">
                     <h3>Smart Travel | Travel Ticket Purchasing</h3>
                     <p>Users can purchase and manage flight tickets directly within the app.</p>
                     <p>Technologies: Java & XML | Firebase</p>
+                    <a href="https://github.com/YOUR_GITHUB/SMART-TRAVEL" target="_blank" class="check-btn">View Project</a>
                 </div>
             </div>
         </div>
-<br>
+    <br>
         <div class="project-category">
             <h3>Game Development</h3>
             <br>
@@ -97,17 +108,22 @@
                     <h3>Endless Run Game</h3>
                     <p>An endless runner game built with Unity and C#.</p>
                     <p>Technologies: Unity | C#</p>
+                    <a href="https://github.com/YOUR_GITHUB/ENDLESS-RUN" target="_blank" class="check-btn">View Project</a>
                 </div>
             </div>
         </div>
-
     </section>
+    
 
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:wisemanmlora@gmail.com">wisemanmlora@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/chiya-mlondi">Chiya Mlondi</a></p>
-        <p>GitHub: <a href="https://github.com/wiseman325">Chiya Mlondi</a></p>
+        <hr>
+        <br>
+        <p>Email: <a href="mailto:wisemanmlora@gmail.com" target="_blank" rel="noopener noreferrer">wisemanmlora@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/chiya-mlondi" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/wiseman325" target="_blank" rel="noopener noreferrer">GitHub</a></p>  
+        <br>
+        <hr>       
     </section>
 
     <script src="assets/script.js"></script>

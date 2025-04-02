@@ -10,5 +10,10 @@ function adjustAnimationSpeed() {
     animation.style.animationDuration = window.innerWidth < 600 ? '20s' : '15s';
 }
 
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+}
+
+
 adjustAnimationSpeed();
 window.addEventListener('resize', adjustAnimationSpeed);
